@@ -394,16 +394,16 @@ footer .social-links {
         
     }
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 750px ){
    .about .container  {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        overflow: hidden;
-       
     }
-  
+    footer{
+        margin-top: 300px;
+    }
    
     }
    
