@@ -177,18 +177,22 @@ p{
     
 }
 /* para que el grid solo aplique al contenedor dentro de about */ 
-.about div:first-child{
+.about .container{
     display: grid;
     grid-template-rows: 10% 80%;
-    height: 680px;
+    width:100%;
+    height: 700px;
 }
 
-.about  h2 {
-    grid-column-start: 1 span 2;
-    justify-content: center;
+.about  .container h2 {
+    
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.125em;
+    grid-column-start: 1;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end:2;
 }
 
 .bio-info{
@@ -198,7 +202,7 @@ p{
     flex-direction: column;
     margin:auto;
     width: 450px;
-    height: 600px;
+    height: 500px;
     
    
 }
@@ -207,7 +211,7 @@ p{
    grid-row-start: 1;
    width: 200px;
    margin-left: 100px;
-   margin-bottom: 100px;
+   margin-bottom: 50px;
    
 }
 
@@ -364,11 +368,13 @@ footer .social-links {
         margin-top: 1em;
     }
 
+    
 
 
 
     /*TODO: FALTA CSS */
 } 
+
 
 @media only screen and (min-width: 1024px) {
 
@@ -388,3 +394,16 @@ footer .social-links {
         
     }
 }
+@media only screen and (max-width: 750px){
+   .about .container  {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow: hidden;
+       
+    }
+  
+   
+    }
+   
