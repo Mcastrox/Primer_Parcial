@@ -9,6 +9,7 @@
     font-size: calc(0.5em + 1vh);
 }
 
+
 /* El estilo base para moviles */
 /* aqui se cambian las caracteristicas mas generales de todo el sitio*/
 body {
@@ -42,8 +43,6 @@ p{
    
     width: 110px;
     margin: 1em;
-    
-
 }
 
 .options {
@@ -74,6 +73,7 @@ p{
     color:red;
 }
 
+
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
@@ -95,19 +95,18 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-
+    height: 200px;
 }
 
+/* para cambiar el tamano de los iconos de git y twitter*/
 .social-links li a{
     color: white;
     text-decoration: none;
-    font-size: 8em;
-    margin : 0.125em;
+    font-size: 150px;
+    margin : 0.2em;
     
-    
+   
 }
-
 
 .green-area {
     background-color: #0AC693; 
@@ -258,7 +257,9 @@ p{
     font-size: 1em;
     width: 100%;
 }
-
+.hide-mobile i{
+    font-size: 80px;
+}
 /* Decorando placeholder */
 
 ::-webkit-input-placeholder { 
@@ -347,12 +348,13 @@ footer .social-links {
         margin: 1.5em;
     }
 
-    .show-desktop {
+    .show-desktop  {
         display: block;
         color:#0AC693;
-      
+       
     }
-
+    
+    
     .hide-desktop {
         display: none;
     
@@ -368,8 +370,7 @@ footer .social-links {
         margin-top: 1em;
     }
 
-    
-
+   
 
 
     /*TODO: FALTA CSS */
