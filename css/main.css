@@ -11,7 +11,6 @@
 }
 */
 
-
 /* El estilo base para moviles */
 /* aqui se cambian las caracteristicas mas generales de todo el sitio*/
 body {
@@ -78,7 +77,7 @@ footer p{
 }
 
 /* cambiar color al contacto cuando se le ponga el mouse encima*/
-#menu li:last-child a:hover{
+#menu li a:hover{
     color:red;
 }
 
@@ -122,13 +121,17 @@ footer p{
 .green-area {
     background-color: #0AC693; 
 }
-
+/* la anchura de la seccion de cada publicacion */
+.green-area  article{
+    height: 380px;
+}
 
 .post {
     padding: 1em;
     margin-bottom: -2px;
     
 }
+/* se configura el titulo del area verde */
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -153,7 +156,7 @@ footer p{
     text-align: center;
     padding-bottom: 2em;
 }
-
+/* config general de lo del area verde */ 
 .post article img{
     height: 150px;
     width: 100%;
@@ -301,19 +304,19 @@ footer p{
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
-
+/* color de los iconos del footer y el fondo */
 footer{
    
     background-color: #0D5061;
     color:#D7DEE6;
     
 }
-
+/* margen para el  footer */
 footer .social-links li {
    
     margin-top: 20px;
 }
-
+/* config general del menu del inicio */
 .menu {
     background-color: #112935;
     position: absolute;
@@ -330,6 +333,7 @@ footer .social-links li {
     padding: 1em;
     
 }
+/* forma en que se va a manejar el menu */
 .menu li {
     display: block;
     padding: 0.5em;
@@ -337,7 +341,7 @@ footer .social-links li {
     
     
 }
-
+/* color del texto de la barra de navegacion */
 .menu li a {
     color:white;
     text-decoration: none;
@@ -346,10 +350,8 @@ footer .social-links li {
 
 
 
-
 /* Pesonalizando estilo para tablets*/
-@media only screen and (min-width: 668px) {
-  
+@media only screen and (min-width: 768px) {
     .post ul {
         list-style: none;
         display: flex;
@@ -392,18 +394,8 @@ footer .social-links li {
         margin-top: 1em;
     
     }
-
-    /*TODO: FALTA CSS */
+   
 } 
-
-
-@media only screen and (min-width: 1024px) {
-
-       /*TODO: FALTA CSS */
-
-
-
-}
 
 @media only screen and (min-width: 1440px) {
 
@@ -415,10 +407,12 @@ footer .social-links li {
         
     }
 }
-/* para que se ajuste cuando la pantalla sea como la de un iphone 6,7,8 */
-@media only screen and (max-width: 750px ){
+/* para que se ajuste cuando la pantalla sea como la de un iphone 6,7,8 y tablets */
+@media only screen and (max-width: 1024px ){
+    /* aqui se configura el ancho y el alto de los contenedores para que se ajuste al tamano */
     .about{
         height: 1100px;
+        width: 100%;
     }
    .about .container  {
         display: flex;
@@ -427,7 +421,7 @@ footer .social-links li {
         justify-content: center;
     }
     .about .container h2{
-        width: 370px;
+        width: 1008px;
     }
     .about .container p{
         justify-content: center;
@@ -435,12 +429,15 @@ footer .social-links li {
     }
     .about .container .bio-info {
         margin-bottom: 100px;
+        width: 1008px;
         
     }
     .about .container .contact-form{
         width: 370px;
         height: 450px;
+        margin:auto;
     }
+    /* especificaciones acerca del footer margen ancho etc */
     footer{
         height: 200px;
     }
@@ -452,6 +449,7 @@ footer .social-links li {
         margin-top:50px;
         
 }
+/*ancho para el boton rojo */
 .contact-form input[type=submit]{
     
     width:370px;
@@ -459,12 +457,56 @@ footer .social-links li {
     .options{
         color:white;
     }
-    
+    /* el ancho de los espacios para escribir */
     .contact-form input, .contact-form textarea{
         
         width: 300px;
-    }
+    } 
+    /* formato del logo */
    .bio-info img{
        margin-bottom: 0px;
+       justify-content: center;
+       margin:auto;
    }
+}
+/* para que se ajuste a un dispositivo con ancho de pantalla de 850px*/
+@media only screen and (max-width: 850px ){
+    .about{
+        height: 1250px;
+    }
+    .about .container h2{
+        width: 820px;
+    }
+    /* para que el footer no se joda cuando se va haciendo pequena la pantalla */
+    footer{
+        width: auto;
+    }
+    /* los elemntos del footer siempre centrados */
+    footer .social-links{
+        justify-content: center;
+    } 
+}
+/* para que se ajuste a un dispositivo con ancho de pantalla de 375px*/
+@media only screen and (max-width: 375px ){
+    footer{
+        width: 370px;
+    }
+    footer p{
+        justify-content: center;
+    }
+    footer .social-links{
+        justify-content: center;
+    }
+    .about{
+        height: 1100px;
+    }
+    .about .container .contact-form{
+        width: auto;
+        height: 450px;
+        margin:auto;
+    }
+    .contact-form input, .contact-form textarea{
+        
+        width: 300px;
+    } 
 }
